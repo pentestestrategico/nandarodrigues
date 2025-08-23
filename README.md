@@ -72,7 +72,7 @@ npx serve .
 ## 💬 Envio via WhatsApp
 Todos os formulários geram uma URL pré-formatada para o número:
 ```
-+55 21 98346-3607
++55 21 98346-xxx
 ```
 Arquivo responsável: `js/forms.js`.
 
