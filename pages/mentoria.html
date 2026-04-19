@@ -12,7 +12,12 @@
 <body>
   <header class="site-header">
     <div class="container navbar">
-      <a href="../index.html" class="logo">Nanda<span>.Empodera</span></a>
+      <a href="../index.html" class="logo">Nanda Rodrigues</a>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav>
         <ul>
           <li><a href="../index.html">Início</a></li>
@@ -20,6 +25,7 @@
           <li><a href="cursos.html">Cursos</a></li>
           <li><a class="active" href="mentoria.html">Mentoria</a></li>
           <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="../index.html#depoimentos">Depoimentos</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
@@ -28,7 +34,7 @@
   <main>
     <section class="section" style="padding-top:4rem;">
       <div class="container" style="max-width:920px;">
-        <h1 class="section-title" style="margin-bottom:2.4rem;">Mentoria Exclusiva</h1>
+        <h1 class="section-title" style="margin-bottom:2.4rem;">Mentoria LIDERE</h1>
         <p style="color:#d0d0d0; font-size:1.05rem;">A mentoria 1:1 é um espaço estratégico e sensível para alinhar identidade, posicionamento e direção. Trabalhamos pilares de clareza, narrativa pessoal, presença, expressão e expansão profissional com elegância e profundidade – sem fórmulas engessadas.</p>
         <div class="grid" style="margin-top:3rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
           <div class="value-card">
@@ -82,5 +88,33 @@
   </footer>
   <script>document.getElementById('ano').textContent=new Date().getFullYear();</script>
   <script src="../js/forms.js" defer></script>
+  <script>
+    // Menu Mobile
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('nav ul');
+    
+    if (mobileMenuBtn && navMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+      
+      // Fechar menu ao clicar em um link
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuBtn.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+      
+      // Fechar menu ao clicar fora
+      document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+          mobileMenuBtn.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
+      });
+    }
+  </script>
 </body>
 </html>

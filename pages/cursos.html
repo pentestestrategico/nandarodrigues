@@ -12,7 +12,12 @@
 <body>
   <header class="site-header">
     <div class="container navbar">
-      <a href="../index.html" class="logo">Nanda<span>.Empodera</span></a>
+      <a href="../index.html" class="logo">Nanda Rodrigues</a>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav>
         <ul>
           <li><a href="../index.html">Início</a></li>
@@ -20,6 +25,7 @@
           <li><a class="active" href="cursos.html">Cursos</a></li>
           <li><a href="mentoria.html">Mentoria</a></li>
           <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="../index.html#depoimentos">Depoimentos</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
@@ -30,23 +36,62 @@
       <div class="container">
         <h1 class="section-title" style="margin-bottom:3rem;">Cursos & Programas</h1>
         <div class="grid courses-grid">
-          <div class="course-card" id="presenca">
-            <div class="course-meta"><span>IMERSÃO</span><span>4 encontros</span></div>
-            <h3>Poder da Presença</h3>
-            <p>Descubra e fortaleça a sua expressão pessoal. Oratória, linguagem corporal e narrativa para reuniões, apresentações e networking.</p>
-            <a class="btn outline" href="#form">Inscrever</a>
-          </div>
-          <div class="course-card" id="marca">
-            <div class="course-meta"><span>ONLINE</span><span>8 módulos</span></div>
-            <h3>Marca Pessoal Elegante</h3>
-            <p>Defina pilares, tom de voz, elementos estéticos e posicionamento digital com consistência e autenticidade.</p>
-            <a class="btn outline" href="#form">Inscrever</a>
-          </div>
-          <div class="course-card" id="lideranca">
-            <div class="course-meta"><span>AO VIVO</span><span>6 semanas</span></div>
-            <h3>Liderança Autêntica</h3>
-            <p>Gestão emocional, visão estratégica e influência positiva para liderar times, processos ou ideias.</p>
-            <a class="btn outline" href="#form">Inscrever</a>
+          <div class="course-card" id="mentory-class">
+            <div class="course-meta"><span>PROGRAMA COMPLETO</span><span>3 módulos</span></div>
+            <h3>Mentory Class</h3>
+            <p style="margin-bottom: 2rem;">
+              Programa completo de desenvolvimento pessoal e profissional para mulheres empreendedoras. Uma jornada transformadora dividida em 3 módulos sequenciais que vão desde o autoconhecimento até a monetização estratégica.
+            </p>
+
+            <div class="modules-container">
+              <div class="module-item">
+                <div class="module-header">
+                  <span class="module-number">Módulo 1</span>
+                </div>
+                <h4>Autoconhecimento: a base de tudo</h4>
+                <p>
+                  Antes de vender, você precisa se entender. Mergulhe em si mesma para identificar padrões, crenças limitantes e comportamentos que travam o crescimento. Aqui, você reconstrói sua identidade com intenção.
+                  <br><br>
+                  <strong>Você vai trabalhar:</strong> Clareza de identidade, crenças que sabotam resultados, fortalecimento da autoconfiança e alinhamento entre quem você é e o que comunica.
+                  <br><br>
+                  <strong>Resultado:</strong> uma mulher mais segura, consciente e preparada para se posicionar com verdade.
+                </p>
+              </div>
+
+              <div class="module-item">
+                <div class="module-header">
+                  <span class="module-number">Módulo 2</span>
+                </div>
+                <h4>Posicionamento & Branding</h4>
+                <p>
+                  <strong>Deixando de ser mais uma</strong> — Quem não se posiciona, compete por preço.
+                  <br><br>
+                  Aqui, o foco é sair da invisibilidade e construir autoridade. Aprenda como ocupar um espaço único no mercado, sendo lembrada e desejada.
+                  <br><br>
+                  <strong>Você vai trabalhar:</strong> Definição de nicho e público ideal, construção de mensagem clara e magnética, diferenciação no mercado e como ser percebida como autoridade.
+                  <br><br>
+                  <strong>Resultado:</strong> um posicionamento forte que atrai clientes certos — sem precisar implorar por venda.
+                </p>
+              </div>
+
+              <div class="module-item">
+                <div class="module-header">
+                  <span class="module-number">Módulo 3</span>
+                </div>
+                <h4>Vendas: estratégia com posicionamento</h4>
+                <p>
+                  <strong>Venda não é insistência. É consequência.</strong>
+                  <br><br>
+                  Aprenda a vender com estratégia, sem depender de scripts engessados ou pressão. A venda passa a ser natural, porque o posicionamento faz o trabalho pesado.
+                  <br><br>
+                  <strong>Você vai trabalhar:</strong> Processo de venda alinhado ao posicionamento, como gerar desejo antes da oferta, comunicação que converte e técnicas de fechamento com autenticidade.
+                  <br><br>
+                  <strong>Resultado:</strong> mais vendas com menos esforço, atraindo clientes que já chegam prontos para comprar.
+                </p>
+              </div>
+            </div>
+
+            <a class="btn outline" href="https://pay.kiwify.com.br/sNuYSTs" target="_blank" style="margin-top: 2rem;">Inscrever no Programa Completo</a>
           </div>
         </div>
       </div>
@@ -64,9 +109,7 @@
           </div>
             <select name="programa" required>
               <option value="">Selecione o programa</option>
-              <option value="Imersão Poder da Presença">Imersão Poder da Presença</option>
-              <option value="Marca Pessoal Elegante">Marca Pessoal Elegante</option>
-              <option value="Liderança Autêntica">Liderança Autêntica</option>
+              <option value="Mentory Class - Programa Completo">Mentory Class - Programa Completo</option>
             </select>
           <textarea name="objetivo" placeholder="Objetivo principal"></textarea>
           <button class="btn" type="submit">Enviar via WhatsApp</button>
@@ -79,5 +122,33 @@
   </footer>
   <script>document.getElementById('ano').textContent=new Date().getFullYear();</script>
   <script src="../js/forms.js" defer></script>
+  <script>
+    // Menu Mobile
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('nav ul');
+    
+    if (mobileMenuBtn && navMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+      
+      // Fechar menu ao clicar em um link
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuBtn.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+      
+      // Fechar menu ao clicar fora
+      document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+          mobileMenuBtn.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
+      });
+    }
+  </script>
 </body>
 </html>

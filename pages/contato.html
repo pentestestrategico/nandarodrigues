@@ -4,15 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contato | Nanda Empodera</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    .socials {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .instagram {
+      color: gold;
+    }
+
+    .whatsapp {
+      color: #25D366;
+    }
+
+    .social-icon:hover {
+      opacity: 0.7;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
+
 <body>
+
   <header class="site-header">
     <div class="container navbar">
-      <a href="../index.html" class="logo">Nanda<span>.Empodera</span></a>
+      <a href="../index.html" class="logo">Nanda Rodrigues</a>
+
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav>
         <ul>
           <li><a href="../index.html">Início</a></li>
@@ -20,34 +67,75 @@
           <li><a href="cursos.html">Cursos</a></li>
           <li><a href="mentoria.html">Mentoria</a></li>
           <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="../index.html#depoimentos">Depoimentos</a></li>
           <li><a class="active" href="contato.html">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main>
     <section class="section" style="padding-top:4rem;">
       <div class="container contact-wrapper">
+
+        <!-- INFO -->
         <div class="contact-info">
           <h3>Fale Comigo</h3>
-            <p>Envie uma mensagem para parcerias, contratação de palestras, entrevistas ou dúvidas sobre programas.</p>
-            <div class="socials">
-              <a aria-label="Instagram" href="#">IG</a>
-              <a aria-label="LinkedIn" href="#">IN</a>
-              <a aria-label="YouTube" href="#">YT</a>
-              <a aria-label="WhatsApp" href="#">WA</a>
-            </div>
+          <p>
+            Envie uma mensagem para parcerias, contratação de palestras,
+            entrevistas ou dúvidas sobre programas.
+          </p>
+
+          <div class="socials">
+
+            <!-- Instagram -->
+            <a 
+              class="social-icon instagram" 
+              href="https://www.instagram.com/nanda_rodriguesoficial" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Abrir Instagram oficial"
+            >
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+
+            <!-- WhatsApp -->
+            <a 
+              class="social-icon whatsapp" 
+              href="https://wa.me/5521983463607" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Abrir conversa no WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+
+          </div>
+
+          <div class="contact-email">
+            <a href="mailto:Nandarodriguesmentoria@gmail.com" class="email-link" aria-label="Enviar e-mail para Nandarodriguesmentoria@gmail.com">
+              <i class="fas fa-envelope"></i>
+              nandarodriguesmentoria@gmail.com
+            </a>
+          </div>
         </div>
+
+        <!-- FORM -->
         <div>
           <form id="formContato" class="contact-form">
+            
             <div class="row">
               <input name="nome" required type="text" placeholder="Nome" />
               <input name="email" required type="email" placeholder="E-mail" />
             </div>
+
             <div class="row">
               <input name="assunto" type="text" placeholder="Assunto" />
               <input name="telefone" type="tel" placeholder="Telefone" maxlength="20" required />
             </div>
+
             <div class="row">
               <select name="tipo">
                 <option value="">Tipo de contato</option>
@@ -57,17 +145,58 @@
                 <option value="Parceria">Parceria</option>
               </select>
             </div>
+
             <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-            <button class="btn" type="submit">Enviar via WhatsApp</button>
+
+            <button class="btn" type="submit">
+              Enviar via WhatsApp
+            </button>
+
           </form>
         </div>
+
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
-    <div class="container copy">© <span id="ano"></span> Nanda Empodera.</div>
+    <div class="container copy">
+      © <span id="ano"></span> Nanda Empodera.
+    </div>
   </footer>
-  <script>document.getElementById('ano').textContent=new Date().getFullYear();</script>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+
   <script src="../js/forms.js" defer></script>
+
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('nav ul');
+
+    if (mobileMenuBtn && navMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuBtn.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+          mobileMenuBtn.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>
